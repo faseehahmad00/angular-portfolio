@@ -1,0 +1,29 @@
+<div class="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40 w-full">
+    <h2 class="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+      <briefcase-icon class="h-6 w-6 flex-none" />
+      <span class="ml-3">Work</span>
+    </h2>
+    <ol class="mt-6 space-y-4">
+      @for (role of resume; track role) {
+        <li>
+          <!-- Create a role-item component or write display inline -->
+          <div class="flex justify-between">
+            <div>
+            <strong>{{ role.title }}</strong> at {{ role.company }}
+            </div>
+            <div>
+            {{ role.start }} - {{ getEnd(role.end) }}
+          </div>
+          </div>
+        </li>
+      }
+    </ol>
+    <a href="https://drive.google.com/uc?export=download&id=1mACMZHVxvArXpKJuvazikKHVTiNg35Ni">
+    <button class="group mt-6 w-full flex items-center justify-center gap-2 border-zinc-700 border-1 border rounded-md bg-zinc-600 py-2">
+      Download CV
+      <app-arrow-down
+        class="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50"
+      />
+    </button>
+  </a>
+  </div>
