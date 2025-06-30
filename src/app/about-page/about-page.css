@@ -1,0 +1,11 @@
+p {
+  color: white
+}
+
+.social {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-decoration: underline;
+  gap: 10px;
+}

@@ -1,5 +1,17 @@
 <div class="main">
     <div class="main-content">
-        <app-portfolio-container></app-portfolio-container>
+        <nav class="navbar">
+            @if (router.url === '/about' || router.url === '/projects') {
+                <a class="nav-btn" href="">
+                  <app-arrow-down class="rotate-[90deg] h-8 w-6 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50"/>
+                </a>
+              }
+            <a class="nav-btn" href="/about">About</a>
+            <a class="nav-btn" href="/projects">Projects</a>
+          </nav>
+          <router-outlet></router-outlet>
     </div>
 </div>    
+
+
+
